@@ -35,3 +35,10 @@ The implementation in this repository is newly authored for this portfolio and i
 
 ## License
 No license has been added yet. Add a license before redistributing this repository.
+
+## Operational Validation
+
+- Define inventory, lead-time, stockout, and reorder metrics consistently across suppliers and products.
+- Validate date ranges, units, missing deliveries, and unusually large or negative quantities.
+- Compare suggested reorder quantities with lead-time assumptions and safety-stock policies.
+- Treat analytical recommendations as planning support and confirm operational constraints before acting.
