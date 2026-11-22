@@ -1,44 +1,27 @@
 # Supply Chain Analytics
 
-Inventory and supply-chain analytics for stock health, supplier lead times, and reorder planning.
+A Streamlit inventory-planning demo built around generated SKU demand, stock-on-hand, lead-time, and unit-cost data.
 
-## Overview
-This repository contains an independently authored, reproducible Python application. It is designed as a portfolio-quality demonstration of a practical analytics or machine-learning workflow, with interactive exploration and downloadable results.
+## Dashboard features
 
-## Features
-- Interactive Streamlit interface
-- Reproducible demo data so the project runs immediately
-- Data exploration, modelling or KPI analysis relevant to the project
-- Charts and tabular results
-- CSV export where applicable
-
-## Tech stack
-Python, Streamlit, Pandas, NumPy, scikit-learn, Plotly.
+- Generates a reproducible sample of 350 SKUs across four categories.
+- Estimates a reorder point from daily demand and lead time, with a variability buffer.
+- Labels items as **Reorder**, **Healthy**, or **Overstock**.
+- Filters by category and visualizes stock status and demand versus inventory.
+- Exports an enriched replenishment table with suggested order quantities.
 
 ## Run locally
+
 ```bash
 python -m venv .venv
-# Windows: .venv\Scripts\activate
-# macOS/Linux: source .venv/bin/activate
 pip install -r requirements.txt
 streamlit run app.py
 ```
 
-## Data and reproducibility
-The default dataset is synthetic and generated in code with a fixed random seed. It is intended for demonstration and testing, not as a substitute for validated real-world data. Where applicable, upload a CSV through the app to explore your own dataset.
+## Scope
 
-## Responsible use
-Outputs are educational and should not be treated as professional, medical, financial, credit, or hiring decisions. Validate data quality, model performance, fairness, privacy, and domain requirements before any real-world use.
+All default inventory and demand values are synthetic. The reorder formula is a demonstration and does not account for supplier constraints, service-level policy, seasonality, pack sizes, or actual purchase orders. Validate assumptions before operational use.
 
-## Originality and attribution
-The implementation in this repository is newly authored for this portfolio and is not a wholesale copy of another GitHub repository. Public open-source project directories and topic pages were consulted for project discovery and inspiration; no third-party source code is being represented as original work.
+## Maintainer
 
-## License
-No license has been added yet. Add a license before redistributing this repository.
-
-## Operational Validation
-
-- Define inventory, lead-time, stockout, and reorder metrics consistently across suppliers and products.
-- Validate date ranges, units, missing deliveries, and unusually large or negative quantities.
-- Compare suggested reorder quantities with lead-time assumptions and safety-stock policies.
-- Treat analytical recommendations as planning support and confirm operational constraints before acting.
+Ravi Kumar Rao · [GitHub](https://github.com/Ravi506051)
